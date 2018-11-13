@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='operations.css')}}">
+	<title>API Operations</title>
+</head>
+<body>
+	<div class="form-style-8" width=50%>
+		<h2><center>Perform Operations</center></h2>
+		<center>
+			<form action="/upload" method="POST" enctype = "multipart/form-data">
+				
+				<h3>Your file {{filename}} was uploaded sucessfully..!</h3>
+
+			  	<select onchange="report(this.options[this.selectedIndex].value)">
+		  			<option disabled selected value="default" >Select Action</option>
+		  			<option value="Add">Add a new software</option>
+		  			<option value="View">View Softwares</option>
+		  			<option value="Update">Update Software</option>
+		  			<option value="Delete">Delete Software</option>
+		  		</select>
+  			</form>
+         		
+			</form>
+		</center>
+	</div>
+</body>
+</html>
